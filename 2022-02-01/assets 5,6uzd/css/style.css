@@ -1,0 +1,21 @@
+#random-number {
+    background-color: black;
+    color: #fff;
+}
+
+#number1 {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    background-color: rgb(105, 100, 100, 0.2);
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}

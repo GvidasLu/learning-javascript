@@ -29,3 +29,7 @@ function chooseColor (x) {
         return '#00ff00';
     }
 }
+
+// 7 uzduotis
+
+
