@@ -142,7 +142,8 @@
         }
 
         #sesta_uzduotis h3 {
-            padding-top: 600px; 
+            padding-left: 610px;
+            color: rgb(0, 0, 0);
         }
 
         #sesta_uzduotis .block {
@@ -150,6 +151,11 @@
             height: 5px;
             background: red;
             position: absolute;
+        }
+
+        #homework_uzduotis21 {
+            padding-top: 60px;
+            display: block;
         }
     </style>
 
@@ -171,6 +177,153 @@
         rezultatas += `<h3>Is krastiniu islendanciu blokeliu suma yra: ${block_count}</h3>`
 
         document.getElementById('sesta_uzduotis').innerHTML = rezultatas
+    </script>
+
+    <div id="homework_uzduotis21">
+        <p>Metam monetą. Monetos kritimo rezultatą imituojam randomSkaicius() funkcija, kur 0 yra herbas, o 1 - skaičius. Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas. Suprogramuokite keturis skirtingus scenarijus kai monetos metimą stabdome:
+            a) Iškritus herbui;
+            b) Tris kartus iškritus herbui;
+            c) Tris kartus iš eilės iškritus herbui;
+            </p>
+    </div>
+    <script>
+        // a) pratimas
+        // let moneta
+
+        // while(moneta != 0) {
+        //     moneta = randomSkaicius(0, 1);
+            
+        //     if(moneta == 1) {
+        //         console.log('S');
+
+        //     }else if(moneta == 0) {
+        //         console.log('H');
+        //     }
+            
+        // }
+
+// ----------------------- b) pratimas
+
+        // let kartai = 0;
+
+        // while(kartai < 3) {
+        //    let moneta = randomSkaicius(0, 1);
+            
+        //     if(moneta == 1) {
+        //         console.log('S');
+
+        //     }else if(moneta == 0) {
+        //         kartai++;
+        //         console.log('H');
+        //     }
+        // }
+
+
+// ------------------------ c) pratimas
+
+        // let kartai = 0;
+
+        // while(kartai < 3) {
+        //    let moneta = randomSkaicius(0, 1);
+            
+        //     if(moneta == 1) {
+        //         kartai = 0;
+        //         console.log('S');
+
+        //     }else if(moneta == 0) {
+        //         kartai++;
+        //         console.log('H');
+        //     }
+        // }
+
+    </script>
+
+    <div id="homework_uzduotis22">
+        <p>Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami randomSkaicius() funkcija. Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+          a)  “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+          b)   “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite rand() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+        </p>
+    </div>
+    <script>
+
+        let vinis1 = 85;
+        let vinis2 = 85;
+        let vinis3 = 85;
+        let vinis4 = 85;
+        let vinis5 = 85; 
+        
+        let mazaisSmugais = 0;
+        let dideliSmugiai = 0;
+
+        function mazaisSmugaisf (vinis) {
+            let mSmugiais = randomSkaicius(5,20);
+            return vinis - mSmugiais;
+        }
+
+        function dideliSmugiaif (vinis) {
+            let dSmugiais = randomSkaicius(20,30);
+            let tikimybe = randomSkaicius(0,1);
+            return vinis - dSmugiais * tikimybe;
+        }
+
+        while(vinis1 > 0) {
+            vinis1 = mazaisSmugaisf(vinis1);
+            mazaisSmugais++;
+        }
+
+        while(vinis2 > 0) {
+            vinis2 = mazaisSmugaisf(vinis2);
+            mazaisSmugais++;
+        }
+
+        while(vinis3 > 0) {
+            vinis3 = mazaisSmugaisf(vinis3);
+            mazaisSmugais++;
+        }
+
+        while(vinis4 > 0) {
+            vinis4 = mazaisSmugaisf(vinis4);
+            mazaisSmugais++;
+        }
+
+        while(vinis5 > 0) {
+            vinis5 = mazaisSmugaisf(vinis5);
+            mazaisSmugais++;
+        }
+            
+        console.log(`Mazu smugiu reikejo ${mazaisSmugais}`);
+        
+        let vinis6 = 85;
+        let vinis7 = 85;
+        let vinis8 = 85;
+        let vinis9 = 85;
+        let vinis10 = 85;
+
+        while(vinis6 > 0) {
+            vinis6 = dideliSmugiaif(vinis6);
+            dideliSmugiai++;
+        }
+
+        while(vinis7 > 0) {
+            vinis7 = dideliSmugiaif(vinis7);
+            dideliSmugiai++;
+        }
+
+        while(vinis8 > 0) {
+            vinis8 = dideliSmugiaif(vinis8);
+            dideliSmugiai++;
+        }
+
+        while(vinis9 > 0) {
+            vinis9 = dideliSmugiaif(vinis9);
+            dideliSmugiai++;
+        }
+
+        while(vinis10 > 0) {
+            vinis10 = dideliSmugiaif(vinis10);
+            dideliSmugiai++;
+        }
+        console.log(`Dideliu smugiu reikejo ${dideliSmugiai}`);
     </script>
 </body>
 </html>
