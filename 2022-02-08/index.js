@@ -114,3 +114,45 @@
 // } else {
 //     console.log('Bilietas nelaimingas');
 // }
+
+// // 6. Keliamieji metai turi 366 dienas, o paprastieji 365. Visi metai, išskyrus šimtmečius, yra
+// keliamieji, jei dalūs iš 4. Pasakykite, ar metai m yra keliamieji ar paprastieji?
+// Pasitikrinkite: Kai m = 2004, turi būti spausdinama: Metai keliamieji
+
+let m = 2004;
+
+if(m % 4 == 0 && m % 100 != 0) {
+    console.log('Metai keliamieji');
+}else{
+    console.log('Metai nekeliamieji');
+}
+
+// // 7.Skaičius skaitomas skaitmenimis iš abiejų galų vienodai vadinamas polindromu. Pvz.:
+// 121. Žinomas 5-klis natūralus skaičius n. Nustatykite ar skaičius yra polindromas.
+// Pasitikrinkite: Kai n = 12321 , turėtume gauti: Skaičius polindromas; kai n=12423 tada
+// Skaičius nepolindromas
+
+let n = 12456;
+let penktas = n % 10;
+let ketvirtas = Math.floor(n / 10) % 10;
+let antras = Math.floor(n / 1000) % 10;
+let pirmas = Math.floor(n / 10000) % 10;
+
+if(pirmas == penktas && antras == ketvirtas) {
+    console.log('skaicius polindromas');
+}else {
+    console.log('skaicius nepolidromas');
+}
+
+// // 8. Du broliai nesutaria, kuriam tvarkyti kambarį. Jie meta kauliuką. Jei iškrenta skaičius 1, 3
+// arba 5 – kambarį tvarko jaunėlis, jei 2, 4 arba 6 – vyresnėlis. Parašykite programą, kuri
+// įvedus iškritusį skaičių k, ekrane rodytų pranešimą „Kambarį tvarkys jaunėlis“, arba
+// „Kambarį tvarkys vyresnėlis“. Pasitikrinkite: kai k = 1, ekrane turi būti: Kambarį tvarkys
+// jaunėlis. Kai k = 4, ekrane turi būti: Kambarį tvarkys vyresnėlis.
+
+// let k = randomSkaicius(1,6);
+// if(k == 1 || k == 3 || k == 5){
+//     console.log('tvarkys jaunelis');
+// } else{
+//     console.log('tvarkys vyresnelis')
+// }
