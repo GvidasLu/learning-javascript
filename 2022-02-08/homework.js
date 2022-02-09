@@ -64,7 +64,11 @@ if(menuo == 1 || menuo == 5 || menuo == 3 || menuo == 7 || menuo == 8 || menuo =
 }
 
 
-// 11 uzduotis
+// 11 uzduotis Petras išėjo iš namų, kai laikrodis rodė v1 valandų ir m1 minučių. Į gimnaziją Petro
+// kelionė trunka m2 minučių. Parašykite programą, kuri ekrane parodytų pranešimą apie
+// tai, ar Petras nepavėluos į pamoką, prasidedančią v valandų ir m minučių. Pasitikrinkite:
+// jei v1 = 8, m1 = 29, m2 = 43, v = 9, m = 5, turi būti: Petras į pamoką pavėluos; jei v1 = 8,
+// m1 = 29, m2 = 23, v = 9, m = 5, turi būti: Petras į pamoką nepavėluos.
 
 let iseinaV = 8;
 let iseinaM = 25;
@@ -77,3 +81,33 @@ if(iseinaV * 60 + iseinaM + trunka <= prasidedaV * 60 + prasidedaM) {
 }else {
     console.log('petriukas pavelavo');
 }
+
+// 9. Žinomi trijų klasės draugų kontrolinio darbo pažymiai. Sudarykite programą, kuri
+// nustatytų, kuris mokinys gavo geriausią pažymį, kai žinome jų pažymius p1, p2, p3
+// Pasitikrinkite: Jei p1=5, p2=8, p3=9 ekrane turi būti: Trečias gavo geriausią pažymį.
+
+let p1 = 10;
+let p2 = 8;
+let p3 = 9;
+
+if(p1 > p2 && p1 > p3) {
+    console.log('Pirmas mokinys gavo geriausiai');
+}else if(p2 > p3 && p2 > p1){
+    console.log('Antras mokinys gavo daugiausiai');
+}else {
+    console.log('Trecias mokinys gavo geriausia pazymi');
+}
+
+// 10. Parašykite programą, kuri įvedus mėnesio numerį n atspausdintų to mėnesio dienų kiekį
+// d. (tarkime, kad metai yra paprastieji) (pvz. n=5, ats. d=31; n=2 ats. d=28)
+
+let n = 5;
+
+if(n == 1 || n == 3 || n == 5 || n == 7 || n == 8 || n == 10 || n == 12) {
+    console.log('Menesio dienu turi 31 diena');
+}else if(n == 2) {
+    console.log('Menesio dienu turi 28 diena');
+}else {
+    console.log('Menuo turi 30 dienu');
+}
+
