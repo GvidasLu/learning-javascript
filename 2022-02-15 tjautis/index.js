@@ -46,7 +46,7 @@ switch (light) {
 }
 
 
-// Ridenam kauliuką (rand 1-6). 
+// 1. Ridenam kauliuką (rand 1-6). 
 // Jeigu išsiridena 1 arba 5 perku ledų, jeigu 2 arba 4 perku čipsų, jeigu 3 arba 6 perku pieno. 
 // Ką perkat DONE!
 
@@ -70,3 +70,84 @@ switch (kauliukas) {
     default: 
         console.log('Perku pieno');
 }
+
+// //////////////////////////////////
+
+// 2. do while ciklas. Metom kauliuką tol kol iškrenta 5. 
+// Suskaičiuojam kiek kartų mėtėm DONE!
+
+
+// let run;
+// let count = 0;
+// let saugiklis = 0;
+// do {
+//     if (saugiklis++ > 100) break;
+//     count++;
+//     run = randomSkaicius(1, 6);
+//     console.log(run);
+
+// }while(run != 5);
+// console.log('prasisuko: ', count);
+
+// == --> !=
+// != --> == pavirsta i lygybes
+// > --> <=
+// <= --> >
+// < --> >=
+// >= --> <
+// || --> &&
+// && --> ||
+
+// 3. do while ciklas. Metom kauliuką tol kol iškrenta 5 arba 1. 
+// Suskaičiuojam kiek kartų mėtėm DONE!
+
+// let run2;
+// let count2 = 0;
+// do {
+//     count2++;
+//     run2 = randomSkaicius(1, 6);
+//     console.log(run2);
+
+// }while(run2 != 5 && run2 != 1);
+// console.log('prasisuko: ', count2);
+
+// 4. do while ciklas. Metom kauliuką. 
+// Sustojam kai išmestų kauliukų suma tampa didesnė nei 33. 
+// Suskaičiuojam kiek kartų mėtėm DONE!
+
+let runSuma = 0;
+let count4 = 0;
+
+// do {
+//     let run = randomSkaicius(1, 6);
+//     console.log(run);
+//     count4++;
+//     runSuma = runSuma + run;
+// }while(runSuma <= 33);
+
+// \/ tik su while sita uzduoti galima padaryti, bei pasitikrinti be - do.
+while (runSuma <= 33) {
+    let run = randomSkaicius(1, 6);
+    console.log(run);
+    count4++;
+    runSuma = runSuma + run;
+}
+
+console.log('prasisuko ', count4, 'suma: ', runSuma);
+
+// 5. Yra 1000 litrų vandens. 
+// Karvių banda per parą išgeria atsitiktinį kiekį nuo 70 iki 200 litrų. 
+// Paskaičiuoti per kiek dienų karvės išgeria vandenį. DONE!
+
+let vanduo = 0;
+let litrai = 0;
+let count5 = 0;
+
+while (vanduo == 1000) {
+    let litras = randomSkaicius(70,200);
+    console.log(litras);
+    count5++;
+    vanduo = vanduo / litras;
+}
+
+console.log('prasisuko ', count5, 'suma: ', vanduo);
