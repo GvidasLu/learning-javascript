@@ -89,14 +89,14 @@ switch (kauliukas) {
 // }while(run != 5);
 // console.log('prasisuko: ', count);
 
-// == --> !=
-// != --> == pavirsta i lygybes
-// > --> <=
-// <= --> >
-// < --> >=
-// >= --> <
-// || --> &&
-// && --> ||
+// == --> !=         | Visos ligybes pavirsta i neligybes
+// != --> ==         | Visos neligybes pavirsta i ligybes
+// > --> <=          | Daugiau pavirsta i maziau arba lygu
+// <= --> >          | Maziau arba lygu pavirsta i daugiau
+// < --> >=          | Maziau pavirsta i daugiau arba lygu
+// >= --> <          | Daugiau arba lygu pavirsta i maziau
+// || --> &&         | Arba pavirsta i enda(ir)
+// && --> ||         | Endas(ir) pavirsta i arba
 
 // 3. do while ciklas. Metom kauliuką tol kol iškrenta 5 arba 1. 
 // Suskaičiuojam kiek kartų mėtėm DONE!
