@@ -139,15 +139,12 @@ console.log('prasisuko ', count4, 'suma: ', runSuma);
 // Karvių banda per parą išgeria atsitiktinį kiekį nuo 70 iki 200 litrų. 
 // Paskaičiuoti per kiek dienų karvės išgeria vandenį. DONE!
 
-let vanduo = 0;
-let litrai = 0;
-let count5 = 0;
+let h2o = 1000;
+let days = 0;
 
-while (vanduo == 1000) {
-    let litras = randomSkaicius(70,200);
-    console.log(litras);
-    count5++;
-    vanduo = vanduo / litras;
+while (h2o > 0) {
+    days++;
+    h2o = h2o - randomSkaicius(70, 200);
 }
 
-console.log('prasisuko ', count5, 'suma: ', vanduo);
+console.log('Karves numire is troskulio ' + days + ' diena');
