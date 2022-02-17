@@ -69,3 +69,40 @@ for (let i = 0; i < masyvas1.length; i++) {
 }
 
 console.log(count);
+
+// ////////////////////////// \/ dvigubas masyvas(array)
+
+let pirmasAukstas = ['Nauseda', 'Antanas', 'Petras'];
+let antrasAukstas = ['Linas', 'Birute', 'Bebras'];
+let treciasAukstas = ['Tomas', 'Sima', 'Saulius'];
+
+let didelisNamas = [];
+
+didelisNamas.push(pirmasAukstas);
+didelisNamas.push(antrasAukstas);
+didelisNamas.push(treciasAukstas);
+
+console.table(didelisNamas);
+
+console.log(didelisNamas[2][1]);
+
+// 6. atspausdinti bigHouse gyventojų sąrašą DONE!
+
+for (let i = 0; i < didelisNamas.length; i++) {
+    // console.log(didelisNamas[i]); //butu masyvas
+    // const store = didelisNamas[i];
+    // const flats = store.length;
+    for(let k = 0; k < didelisNamas[i].length; k++) {
+        console.log(didelisNamas[i][k]);
+    }
+}
+
+// 7. Kur gyvena tomas? DONE!
+
+for (let i = 0; i < didelisNamas.length; i++) {
+    for (let k = 0; k < didelisNamas[i].length; k++){
+        if (didelisNamas[i][k] == 'Tomas') {
+            console.log('Tomas gyvena: ', i, k);
+        }
+    }
+}
